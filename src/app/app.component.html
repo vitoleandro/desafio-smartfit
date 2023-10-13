@@ -1,4 +1,7 @@
 <section class="wrap">
     <app-header></app-header>
-    <app-form></app-form>
+    <app-form (submitEvent)="onSubmit()"></app-form>
+    <app-legend *ngIf="(showList | async)"></app-legend>
+    <app-cards-list *ngIf="(showList | async)" [unitsList]="unitsList"></app-cards-list>
+    <app-footer></app-footer>
 </section>
